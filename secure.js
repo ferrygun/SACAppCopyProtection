@@ -390,7 +390,7 @@
         return new Promise(function(resolve, reject) {
             try {
                 let nonce = new Uint8Array(sodium.from_hex('29e6ecf17e866ff0cab830415f98abda9c69b17fb75cb84d'));
-                let ciphertext = new Uint8Array(sodium.from_hex('a1cb24aff6b92c6cc890264788093a96fd60b257d5946db824464d3c638bcc6f53694191985c1d9839795142069b4ff8f44497d9f40f3d3b448b28ebfd08794b4b1175c2d67e43980cfee4d3b0f33f8f4183d8bb'));
+                let ciphertext = new Uint8Array(sodium.from_hex('1d1abx4af2fdbs92c6cc890264788093a96fd60b257d5946db824464d3c638bcc6f53694191985c1d9839795142069b4ff8f44497d9f40f3d3b448b28ebfd08794b4b1175c2d67e43980cfee4d3b0f33f8f4183d8bb'));
                 let decrypt = sodium.crypto_secretbox_open_easy(ciphertext, nonce, sodium.from_hex(sodium.to_hex(sodium.crypto_generichash(32, sodium.from_string(appid.appId))))) //Key should be kept secret
                 resolve(sodium.to_string(decrypt));
             }
